@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #f1f1f1;
+  background-image: url('image/ChatGPT Image 24 juin 2025, 13_42_01.png'); /* adapte le chemin si nécessaire */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.15), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+}
+
+/* HEADER */
+.header {
+  background: rgba(255, 255, 255, 0.05); /* Gris très léger et transparent */
+  backdrop-filter: blur(6px);
+  color: #f1f1f1;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+  font-style: italic;
+}
+
+
+
+
+
+/* INTRO */
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.intro-section .text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.intro-section .text h2 {
+  color: #ff3c3c;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.intro-section .image-boxe img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ANIMATION */
+.animation-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.animation-section h2 {
+  color: #ff3c3c;
+  margin-bottom: 1rem;
+}
+
+/* CITATION */
+
+
+.quote-carousel-section {
+  padding: 3rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.quote-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fade 1s ease-in-out;
+}
+
+.quote-slide.active {
+  display: flex;
+}
+
+.quote-slide img {
+  width: 160px;
+  height: 160px;
+  border-radius: 30%;
+  border: 3px solid #c40000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.quote-text blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.quote-text cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #ff3c3c;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #111;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* HERO UFC STYLE */
+.hero-intro {
+  background-image: url('image/ChatGPT\ Image\ 24\ juin\ 2025\,\ 14_11_56.png');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.hero-intro .overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-intro .btn-fight {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #c40000;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.hero-intro .btn-fight:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* SKILLS / CARTES */
+.skills-boxe {
+  padding: 3rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+.skills-boxe h2 {
+  color: #ff3c3c;
+  margin-bottom: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.skills-boxe .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skills-boxe .card {
+  background: white;
+  border: 2px solid #c40000;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #111;
+}
+
+.skills-boxe .card h3 {
+  margin-bottom: 0.5rem;
+  color: #c40000;
+}
+
+/* RÈGLES */
+.rules-section {
+  padding: 4rem 1rem;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-align: center;
+}
+
+.rules-section h2 {
+  font-size: 2rem;
+  color: #ff3c3c;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.rules-text ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.rules-text li {
+  margin-bottom: 1rem;
+  border-left: 4px solid #ff3c3c;
+  padding-left: 0.75rem;
+}
+
+/* Bouton retour à l'accueil */
+.btn-retour-boxe {
+  display: inline-block;
+  margin: 2rem auto 0 auto;
+  padding: 0.8rem 2rem;
+  background: #c40000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(196,0,0,0.15);
+  transition: background 0.2s, transform 0.2s;
+  text-align: center;
+}
+.btn-retour-boxe:hover {
+  background: #ff1a1a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .rules-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rules-text {
+    flex: 1;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .quote-wrapper {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .quote-content {
+    flex: 1;
+  }
+}

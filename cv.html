@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Noa Bendiaf</title>
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+  <main id="cv-content" class="container">
+    <header>
+      <h1>Noa Bendiaf</h1>
+      <p>Développeur web junior passionné</p>
+      <ul class="contact">
+        <li>📞 06 98 64 48 72</li>
+        <li>📧 noabendiaf@gmail.com</li>
+        <li>📍 8 Rue du Soleil des Adrets, 83440 Montauroux</li>
+        <li>💻 <a href="https://github.com/nono-bendi" target="_blank">GitHub</a></li>
+      </ul>
+      <button onclick="downloadPDF()">Télécharger en PDF</button>
+    </header>
+
+    <section>
+      <h2>🤹‍♂️ Compétences</h2>
+      <ul>
+        <li><strong>Développement :</strong> HTML5, CSS3, JavaScript, React</li>
+        <li><strong>CMS :</strong> WordPress, Shopify</li>
+        <li><strong>Soft skills :</strong> Adaptabilité, autonomie, curiosité, rigueur</li>
+        <li><strong>Langues :</strong> Français (courant), Anglais (intermédiaire avancé), Espagnol (élémentaire)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👷 Expériences professionnelles</h2>
+      <ul>
+        <li><strong>Mondial Relay</strong> – Préparateur de commandes (Juin - Août 2024)</li>
+        <li><strong>Three X (Australie)</strong> – Élagueur (Juillet - Août 2023)</li>
+        <li><strong>UberEats (Australie)</strong> – Livreur (Janvier - Juillet 2023)</li>
+        <li><strong>Mangoes Farm (Australie)</strong> – Cueilleur (Déc. 2022 - Jan. 2023)</li>
+        <li><strong>Chez Pierre</strong> – Serveur & responsable activités nautiques (Juin 2022)</li>
+        <li><strong>Eden Parquet</strong> – Réceptionniste & Magasinier (Nov. 2021 - Fév. 2022)</li>
+        <li><strong>Le Ponton</strong> – Employé de restaurant (Juillet - Août 2021)</li>
+        <li><strong>Agence Saint François Immobilier</strong> – Stagiaire (Janv. - Fév. 2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📖 Formation</h2>
+      <ul>
+        <li><strong>Bac Pro Vente</strong> – Lycée Saint-Exupéry (2022)</li>
+        <li><strong>Permis B</strong> (2024)</li>
+        <li><strong>White Card Australie</strong> (2023)</li>
+        <li><strong>Formation Dev Web</strong> – OpenClassrooms (Déc. - Mai 2024-2025)</li>
+        <li><strong>Formation Dev Web</strong> – MOD83 (En cours depuis Mai 2025)</li>
+      </ul>
+    </section>  
+    <section>
+      <h2>🏈 Loisirs</h2>
+      <p>⚽️ Football, 🥊 Boxe anglaise (AMSLF), ✈️ Voyages : Europe, Australie, Asie</p>
+    </section>
+  </main>
+ <body>
+
+  <!-- Bouton retour en haut de page, en dehors du CV -->
+  <div class="return-button">
+    <a href="index.html">
+      <button>Retour à l’accueil</button>
+    </a>
+  </div>
+
+
+  <!-- Scripts HTML2PDF + Fonction -->
+</body>
+
+
+  <!-- Script html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById("cv-content");
+      const opt = {
+        margin: 0.5,
+        filename: "CV-Noa-Bendiaf.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</body>
+</html>
