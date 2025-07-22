@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Received</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta name="author" content="LeakWay Team" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .btn-retour {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-retour:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <lottie-player
+      src="img/confirmation-animation.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px; margin: auto"
+      autoplay
+      loop>
+    </lottie-player>
+
+    <h1>Thank you, your report has been received</h1>
+    <p>Our team will review it shortly.</p>
+    <p>You will be contacted once the reported content has been handled.</p>
+
+    <a href="index.html" class="btn-retour">Return to Home</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
