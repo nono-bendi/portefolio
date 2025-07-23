@@ -21,8 +21,8 @@ jobs:
       - name: Build (facultatif pour HTML/CSS simples)
         run: echo "Pas de build, site statique"
 
-      - name: Déploiement sur GitHub Pages
+        - name: Déploiement sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # ← ici, c’est ton dossier racine
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
