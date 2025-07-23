@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Passion : La Boxe</title>
+  <link rel="stylesheet" href="../css/style-boxe.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+  <!-- En-tête principal -->
+  <header class="header">
+    <h1>🥊 Ma passion : La Boxe Anglaise</h1>
+    <p>Discipline, puissance et respect — bienvenue sur le ring.</p>
+  </header>
+
+  <!-- Section d'accueil dynamique -->
+  <section class="hero-intro">
+    <div class="overlay">
+      <h1>Bienvenue sur le ring</h1>
+      <p>Là où chaque coup compte.</p>
+      <a href="https://www.youtube.com/watch?v=gou6PaEjG8k" target="_blank" class="btn-fight">Voir le combat de l'année</a>
+    </div>
+  </section>
+
+  <!-- Introduction texte + image -->
+  <section class="intro-section">
+    <div class="text">
+      <h2>Pourquoi la boxe ?</h2>
+      <p>La boxe anglaise est bien plus qu’un sport. C’est un mode de vie, une école de rigueur, de mental et de dépassement de soi. Elle m’enseigne la maîtrise de mon corps, l’endurance mentale et la précision dans l’effort.</p>
+    </div>
+    <div class="image-boxe">
+      <img src="../image/pexels-rodolfoclix-1575381.jpg" alt="Illustration boxeur" />
+    </div>
+  </section>
+
+  <!-- Animation et règles -->
+  <section class="rules-section">
+    <h2>🥊 Règles de la boxe anglaise</h2>
+    <div class="rules-container">
+      <lottie-player 
+        src="../image/Animation - 1750756091421.json" 
+        background="transparent" 
+        speed="1" 
+        style="width: 300px; height: 300px;" 
+        loop autoplay>
+      </lottie-player>
+
+      <div class="rules-text">
+        <ul>
+          <li><strong>⏱️ Durée :</strong> Un combat se compose généralement de 12 rounds de 3 minutes (amateurs : 3x3 min).</li>
+          <li><strong>🥊 Techniques autorisées :</strong> Seuls les coups de poing sont permis, au-dessus de la ceinture.</li>
+          <li><strong>🧠 Tactique :</strong> Esquives, contre-attaques et déplacements sont essentiels à la victoire.</li>
+          <li><strong>🛑 Arrêts :</strong> L'arbitre peut arrêter un combat si un boxeur est en danger (TKO).</li>
+          <li><strong>🎯 Objectif :</strong> Mettre l’adversaire KO ou gagner aux points selon les juges.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cartes d'apprentissage -->
+  <section class="skills-boxe">
+    <h2>Ce que la boxe m’a appris</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>💪 Discipline</h3>
+        <p>Se lever tôt, s'entraîner dur, rester concentré chaque jour.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 Maîtrise de soi</h3>
+        <p>Gérer ses émotions, même sous pression.</p>
+      </div>
+      <div class="card">
+        <h3>🥇 Persévérance</h3>
+        <p>Tomber sept fois, se relever huit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrousel de citations -->
+  <section class="quote-carousel-section">
+    <div class="quote-carousel" id="carousel">
+
+      <div class="quote-slide active">
+        <img src="../image/mike.jpg" alt="Mike Tyson">
+        <div class="quote-text">
+          <blockquote>"Tout le monde a un plan jusqu’à ce qu’il se prenne un coup de poing."</blockquote>
+          <cite>— Mike Tyson</cite>
+        </div>
+      </div>
+
+      <div class="quote-slide">
+        <img src="../image/ali.jpg" alt="Muhammad Ali">
+        <div class="quote-text">
+          <blockquote>"Flotte comme un papillon et pique comme une abeille."</blockquote>
+          <cite>— Muhammad Ali</cite>
+        </div>
+      </div>
+
+      <div class="quote-slide">
+        <img src="../image/joe.jpg" alt="Joe Frazier">
+        <div class="quote-text">
+          <blockquote>"Boxer, c’est comme le jazz. Mieux tu es, moins les gens le remarquent."</blockquote>
+          <cite>— Joe Frazier</cite>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bouton de retour -->
+  <a href="../index.html" class="btn-retour-boxe">Retour à l'accueil</a>
+
+  <!-- Son de gong -->
+  <audio id="gong-sound" autoplay>
+    <source src="../audio/gong-sound2.mp3" type="audio/mpeg">
+    Ton navigateur ne supporte pas l’audio.
+  </audio>
+  <script>
+    const gong = document.getElementById("gong-sound");
+    function playGongOnce() {
+      gong.play();
+      document.removeEventListener("click", playGongOnce);
+      document.removeEventListener("scroll", playGongOnce);
+    }
+    document.addEventListener("click", playGongOnce);
+    document.addEventListener("scroll", playGongOnce);
+  </script>
+
+  <!-- Script du carrousel -->
+  <script>
+    const slides = document.querySelectorAll('.quote-slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 6000);
+  </script>
+
+</body>
+</html>
